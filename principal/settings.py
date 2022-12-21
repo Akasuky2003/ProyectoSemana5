@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'users',
     'pagos',
+    'drf_yasg',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,10 @@ CACHES = {
 }
 
 AUTH_USER_MODEL = 'users.User'
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Version1.0',
+    'DESCRIPTION': 'Proyecto de Pagos v1',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}
