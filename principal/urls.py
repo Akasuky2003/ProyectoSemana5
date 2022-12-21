@@ -50,7 +50,7 @@ urlpatterns = [
     # Optional UI:
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    re_path(r'^api/v3/', include(api_v1Pagos)),
-    re_path(r'^api/v4/', include(api_v1User)),
+    re_path(r'^api/v1Pagos/', include(api_v1Pagos)),
+    re_path(r'^api/v1User/', include(api_v1User)),
     
 ]
