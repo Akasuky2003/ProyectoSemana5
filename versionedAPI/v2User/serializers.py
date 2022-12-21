@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from pagos.models import Pagos
 
-class SignUpV2Serializer(serializers.ModelSerializer):
+class SignUpSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pagos
         fields = '__all__'
