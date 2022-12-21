@@ -23,6 +23,8 @@ from drf_yasg import openapi
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from versionedAPI.v1Pagos.router import api_urlpatterns as api_v1Pagos
 from versionedAPI.v1User.router import api_urlpatterns as api_v1User
+from versionedAPI.v2Pagos.router import api_urlpatterns as api_v2Pagos
+from versionedAPI.v2User.router import api_urlpatterns as api_v2User
 schema_view = get_schema_view(
    openapi.Info(
       title="Todo API",
@@ -52,5 +54,7 @@ urlpatterns = [
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     re_path(r'^api/v1Pagos/', include(api_v1Pagos)),
     re_path(r'^api/v1User/', include(api_v1User)),
+    re_path(r'^api/v1Pagos/', include(api_v2Pagos)),
+    re_path(r'^api/v1User/', include(api_v2User)),
     
 ]
